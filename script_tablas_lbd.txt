@@ -1,0 +1,202 @@
+
+
+CREATE TABLE clientes (
+    id               NUMBER NOT NULL,
+    nombre           VARCHAR2(30) NOT NULL,
+    primer_apellido  VARCHAR2(50) NOT NULL,
+    segundo_apellido VARCHAR2(50) NOT NULL,
+    correo           VARCHAR2(100) NOT NULL,
+    telefono         NUMBER NOT NULL
+);
+
+ALTER TABLE clientes ADD CONSTRAINT clientes_pk PRIMARY KEY ( id );
+
+CREATE TABLE cola (
+    id         NUMBER NOT NULL,
+    equipos_id NUMBER NOT NULL,
+    guia_cola  VARCHAR2(25) NOT NULL
+);
+
+ALTER TABLE cola ADD CONSTRAINT cola_pk PRIMARY KEY ( id );
+
+CREATE TABLE equipos (
+    id                   NUMBER NOT NULL,
+    reporte_tecnico_id   NUMBER NOT NULL,
+    estado_id            NUMBER NOT NULL,
+    numero_serie         VARCHAR2(25) NOT NULL,
+    modelo               VARCHAR2(25) NOT NULL,
+    descripcion_problema VARCHAR2(100) NOT NULL,
+    accesorios           VARCHAR2(50) NOT NULL
+);
+
+ALTER TABLE equipos ADD CONSTRAINT equipos_pk PRIMARY KEY ( id );
+
+CREATE TABLE estado (
+    id          NUMBER NOT NULL,
+    clientes_id NUMBER NOT NULL,
+    descripcion VARCHAR2(100) NOT NULL
+);
+
+ALTER TABLE estado ADD CONSTRAINT estado_pk PRIMARY KEY ( id );
+
+CREATE TABLE factura (
+    id          NUMBER NOT NULL,
+    clientes_id NUMBER NOT NULL,
+    descripcion VARCHAR2(100) NOT NULL,
+    costo       FLOAT NOT NULL,
+    iva         FLOAT NOT NULL,
+    total       FLOAT NOT NULL
+);
+
+ALTER TABLE factura ADD CONSTRAINT factura_pk PRIMARY KEY ( id );
+
+CREATE TABLE inventario (
+    id                  NUMBER NOT NULL,
+    productos_nuevos_id NUMBER NOT NULL,
+    productos_usados_id NUMBER NOT NULL,
+    repuestos_usados_id NUMBER NOT NULL,
+    repuestos_nuevos_id NUMBER NOT NULL
+);
+
+ALTER TABLE inventario ADD CONSTRAINT inventario_pk PRIMARY KEY ( id );
+
+CREATE TABLE productos_nuevos (
+    id             NUMBER NOT NULL,
+    codigo         VARCHAR2(50) NOT NULL,
+    nombre         VARCHAR2(50) NOT NULL,
+    cantidad_stock NUMBER NOT NULL,
+    accesorios     VARCHAR2(50) NOT NULL,
+    estado         VARCHAR2(50),
+    precio         FLOAT NOT NULL
+);
+
+ALTER TABLE productos_nuevos ADD CONSTRAINT productos_usadosv1_pk PRIMARY KEY ( id );
+
+CREATE TABLE productos_usados (
+    id             NUMBER NOT NULL,
+    codigo         VARCHAR2(50) NOT NULL,
+    nombre         VARCHAR2(50) NOT NULL,
+    cantidad_stock NUMBER NOT NULL,
+    accesorios     VARCHAR2(50) NOT NULL,
+    estado         VARCHAR2(50),
+    precio         FLOAT NOT NULL
+);
+
+ALTER TABLE productos_usados ADD CONSTRAINT productos_usados_pk PRIMARY KEY ( id );
+
+CREATE TABLE reporte_tecnico (
+    id                   NUMBER NOT NULL,
+    problema_diagnostico VARCHAR2(100) NOT NULL,
+    descripcion          VARCHAR2(100) NOT NULL,
+    costo                FLOAT NOT NULL
+);
+
+ALTER TABLE reporte_tecnico ADD CONSTRAINT reporte_tecnico_pk PRIMARY KEY ( id );
+
+CREATE TABLE repuestos_nuevos (
+    id             NUMBER NOT NULL,
+    codigo         VARCHAR2(50) NOT NULL,
+    nombre         VARCHAR2(50) NOT NULL,
+    cantidad_stock NUMBER NOT NULL,
+    accesorios     VARCHAR2(50) NOT NULL,
+    estado         VARCHAR2(50),
+    precio         FLOAT NOT NULL
+);
+
+ALTER TABLE repuestos_nuevos ADD CONSTRAINT repuestos_usadosv1_pk PRIMARY KEY ( id );
+
+CREATE TABLE repuestos_usados (
+    id             NUMBER NOT NULL,
+    codigo         VARCHAR2(50) NOT NULL,
+    nombre         VARCHAR2(50) NOT NULL,
+    cantidad_stock NUMBER NOT NULL,
+    accesorios     VARCHAR2(50) NOT NULL,
+    estado         VARCHAR2(50),
+    precio         FLOAT NOT NULL
+);
+
+ALTER TABLE repuestos_usados ADD CONSTRAINT productos_usadosv1_pkv1 PRIMARY KEY ( id );
+
+CREATE TABLE taller (
+    id          NUMBER NOT NULL,
+    equipos_id  NUMBER NOT NULL,
+    clientes_id NUMBER NOT NULL
+);
+
+ALTER TABLE taller ADD CONSTRAINT taller_pk PRIMARY KEY ( id );
+
+CREATE TABLE tienda (
+    id            NUMBER NOT NULL,
+    taller_id     NUMBER NOT NULL,
+    inventario_id NUMBER NOT NULL,
+    clientes_id   NUMBER NOT NULL
+);
+
+ALTER TABLE tienda ADD CONSTRAINT tienda_pk PRIMARY KEY ( id );
+
+CREATE TABLE usuarios (
+    id         NUMBER NOT NULL,
+    usuario    VARCHAR2(30) NOT NULL,
+    contrasena VARCHAR2(30) NOT NULL
+);
+
+ALTER TABLE usuarios ADD CONSTRAINT usuarios_pk PRIMARY KEY ( id );
+
+ALTER TABLE cola
+    ADD CONSTRAINT cola_equipos_fk FOREIGN KEY ( equipos_id )
+        REFERENCES equipos ( id );
+
+ALTER TABLE equipos
+    ADD CONSTRAINT equipos_estado_fk FOREIGN KEY ( estado_id )
+        REFERENCES estado ( id );
+
+ALTER TABLE equipos
+    ADD CONSTRAINT equipos_reporte_tecnico_fk FOREIGN KEY ( reporte_tecnico_id )
+        REFERENCES reporte_tecnico ( id );
+
+ALTER TABLE estado
+    ADD CONSTRAINT estado_clientes_fk FOREIGN KEY ( clientes_id )
+        REFERENCES clientes ( id );
+
+ALTER TABLE factura
+    ADD CONSTRAINT factura_clientes_fk FOREIGN KEY ( clientes_id )
+        REFERENCES clientes ( id );
+
+ALTER TABLE inventario
+    ADD CONSTRAINT inventario_productos_nuevos_fk FOREIGN KEY ( productos_nuevos_id )
+        REFERENCES productos_nuevos ( id );
+
+ALTER TABLE inventario
+    ADD CONSTRAINT inventario_productos_usados_fk FOREIGN KEY ( productos_usados_id )
+        REFERENCES productos_usados ( id );
+
+ALTER TABLE inventario
+    ADD CONSTRAINT inventario_repuestos_nuevos_fk FOREIGN KEY ( repuestos_nuevos_id )
+        REFERENCES repuestos_nuevos ( id );
+
+ALTER TABLE inventario
+    ADD CONSTRAINT inventario_repuestos_usados_fk FOREIGN KEY ( repuestos_usados_id )
+        REFERENCES repuestos_usados ( id );
+
+ALTER TABLE taller
+    ADD CONSTRAINT taller_clientes_fk FOREIGN KEY ( clientes_id )
+        REFERENCES clientes ( id );
+
+ALTER TABLE taller
+    ADD CONSTRAINT taller_equipos_fk FOREIGN KEY ( equipos_id )
+        REFERENCES equipos ( id );
+
+ALTER TABLE tienda
+    ADD CONSTRAINT tienda_clientes_fk FOREIGN KEY ( clientes_id )
+        REFERENCES clientes ( id );
+
+ALTER TABLE tienda
+    ADD CONSTRAINT tienda_inventario_fk FOREIGN KEY ( inventario_id )
+        REFERENCES inventario ( id );
+
+ALTER TABLE tienda
+    ADD CONSTRAINT tienda_taller_fk FOREIGN KEY ( taller_id )
+        REFERENCES taller ( id );
+
+
+

@@ -1,0 +1,119 @@
+
+
+--TABLA DE clientes-- 
+
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (1,'David', 'Perico', 'palotes','david@gmail.com',22222222);
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (2,'tommy', 'Perico', 'palotes','david@gmail.com',22222223);
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (3,'jerry', 'Perico', 'palotes','david@gmail.com',22222224);
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (4,'santi', 'Perico', 'palotes','david@gmail.com',22222225);
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (5,'josefina', 'Perico', 'palotes','david@gmail.com',22222227);
+
+--TABLA DE PRODUCTOS NUEVOS-- 
+
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,'jjgjls','consola Play Station 5');
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (2,1,'consola Play Station 5');
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (3,1,'consola Play Station 5');
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (4,1,'consola Play Station 5');
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (5,1,'consola Play Station 5');
+
+--TABLA DE PRODUCTOS USADOS-- 
+
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+
+--TABLA DE REPUESTOS NUEVOS-- 
+
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+
+--TABLA DE REPUESTOS USADOS-- 
+
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,1,'consola Play Station 5');
+
+--TABLA DE REPORTE TECNICO-- 
+
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (1,1,'consola Play Station 5');
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (1,1,'consola Play Station 5');
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (1,1,'consola Play Station 5');
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (1,1,'consola Play Station 5');
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (1,1,'consola Play Station 5');
+
+--TABLA DE USUARIOS-- 
+
+insert into usuarios(id, usuario, contrasena) values (1,1,'consola Play Station 5');
+insert into usuarios(id, usuario, contrasena) values (1,1,'consola Play Station 5');
+insert into usuarios(id, usuario, contrasena) values (1,1,'consola Play Station 5');
+
+
+--con FK --
+
+--TABLA DE ESTADO-- 
+
+insert into estado(id,clientes_id,descripcion) values (1,1,'consola Play Station 5');
+insert into estado(id,clientes_id,descripcion) values (2,2,'consola Play Station 5');
+insert into estado(id,clientes_id,descripcion) values (3,3,'consola Play Station 5');
+insert into estado(id,clientes_id,descripcion) values (4,4,'consola Play Station 5');
+insert into estado(id,clientes_id,descripcion) values (5,5,'consola Play Station 5');
+
+--TABLA DE TIENDA-- 
+
+insert into tienda(id, taller_id, inventatio_id, clientes_id) values (1,1,'consola Play Station 5');
+insert into tienda(id, taller_id, inventatio_id, clientes_id) values (1,1,'consola Play Station 5');
+insert into tienda(id, taller_id, inventatio_id, clientes_id) values (1,1,'consola Play Station 5');
+insert into tienda(id, taller_id, inventatio_id, clientes_id) values (1,1,'consola Play Station 5');
+insert into tienda(id, taller_id, inventatio_id, clientes_id) values (1,1,'consola Play Station 5');
+
+--TABLA DE TALLER-- 
+
+insert into taller(id, equipos_id, clientes_id) values (1,1,'consola Play Station 5');
+insert into taller(id, equipos_id, clientes_id) values (1,1,'consola Play Station 5');
+insert into taller(id, equipos_id, clientes_id) values (1,1,'consola Play Station 5');
+insert into taller(id, equipos_id, clientes_id) values (1,1,'consola Play Station 5');
+insert into taller(id, equipos_id, clientes_id) values (1,1,'consola Play Station 5');
+
+
+--TABLA DE INVENTARIO-- 
+
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (1,1,'consola Play Station 5');
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (1,1,'consola Play Station 5');
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (1,1,'consola Play Station 5');
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (1,1,'consola Play Station 5');
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (1,1,'consola Play Station 5');
+
+
+
+--TABLA DE FACTURA-- 
+
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (1,1,'consola Play Station 5');
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (1,1,'consola Play Station 5');
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (1,1,'consola Play Station 5');
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (1,1,'consola Play Station 5');
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (1,1,'consola Play Station 5');
+
+
+--TABLA DE EQUIPOS-- 
+
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (1,1,'consola Play Station 5');
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (1,1,'consola Play Station 5');
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (1,1,'consola Play Station 5');
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (1,1,'consola Play Station 5');
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (1,1,'consola Play Station 5');
+
+
+--TABLA DE COLA-- 
+
+insert into cola(id, equipos_id, guia_cola) values (1,1,'consola Play Station 5');
+insert into cola(id, equipos_id, guia_cola) values (1,1,'consola Play Station 5');
+insert into cola(id, equipos_id, guia_cola) values (1,1,'consola Play Station 5');
+insert into cola(id, equipos_id, guia_cola) values (1,1,'consola Play Station 5');
+insert into cola(id, equipos_id, guia_cola) values (1,1,'consola Play Station 5');
