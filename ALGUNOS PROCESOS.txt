@@ -1,0 +1,18 @@
+El proseso de login.
+Ingreso de Productos a cualquiera de los 4 inventarios.
+Ingreso de consolas al inventario (cola) del taller.
+Modificar el estado de una consola
+Agregar reporte tecnico de la consola seleccioanda
+Trigger que elimine el primero de la cola cuando ta este en X estado espesifico
+generador de factura (debe de tomar el costo de la reparacion sumarle un 10% y calcular el 13% de iva y dar el total con y sin iva, ademas del mostrar el iva a pagar.
+Creacion de nuevos usuarios.
+GESTOR DE DATOS:
+	LLAMADO A UNA LISTA EN CONCRETO:
+		-CUALQUIERA DE LSO 4 INVENTARIOS.
+		-LISTA DE CONSOLAS EN EL LLARES Y SU ESTADO.
+	Eliminar el producto seleccionado.
+	Modificar cantidad y nombre de un producto.
+
+DEJAR ESTO DE ULTIMO AUN ESTPOY PENSANDOP COMO FACILITARNOS EL TRABAJO
+Ingreso de consolas al taller
+Generar un usuario temporal o una llave temporal ligado a la consola en el taller para que el cliente pueda ver el estado de la consola desde la web.
