@@ -1,0 +1,323 @@
+--TABLA DE clientes-- 
+
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (1,'David', 'Montero', 'Gomez','david@gmail.com',89563663);
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (2,'Tommy', 'Hernandez', 'Soto','tommy@gmail.com',98895463);
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (3,'Jerry', 'Sojo', 'Morales','jerry@gmail.com',41526398);
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (4,'Santi', 'Gonzalez', 'Sanabria','santi@gmail.com',7485912);
+insert into clientes(id,nombre,primer_apellido, segundo_apellido, correo, telefono) values (5,'Josefina', 'Fernanez', 'Monge','josefi@gmail.com',63652541);
+
+
+--TABLA DE PRODUCTOS NUEVOS-- 
+
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (1,'A56D','Control de XBox',25,'Control para el XBox', 'Nuevo', 15000);
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (2,'F53C','Nintendo Wii', 20, 'Cable de video', 'Nuevo', 150000);
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (3,'L09P','Play Station 5', 15, 'Mando de la play5', 'Nuevo', 25000);
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (4,'G23R','Play Station 4', 50, 'Mando de la Play4', 'Nuevo', 15000);
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (5,'N11M','Monitor Dell', 50,'Panalla Dell', 'Nuevo', 69000);
+--TABLA DE PRODUCTOS USADOS-- 
+
+insert into from productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (6,'H56Y','Consola Play Station 5', 2,'Control', 'Usado sin ningun problema', 15000);
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (7,'W23A','Teclado pc de USB', 1,'Teclado', 'Con un pequeño golpe en la caratula',5000);
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (8,'D45S','Cable de video', 5,'Cable', 'Cable sin ningun daño', 5000);
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (9,'Y76G','Control de consola XBox', 2, 'Control','Sin ningun inconveniente', 15000);
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (10,'J78B','Monitor HP', 2, 'Monitor y cable de video', 'Monitor con su cable de video en excelente estado', 25000);
+
+--TABLA DE REPUESTOS NUEVOS-- 
+
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (11,'G23R','Play Station 4', 50, 'Mando de la Play4', 'Nuevo', 15000);
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (12,'F53C','Nintendo Wii', 20, 'Cable de video', 'Nuevo', 150000);
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (13,'A56D','Control de XBox',25,'Control para el XBox', 'Nuevo', 15000);
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (14,'ZPF','Tablet Alcatel', 13, 'Tableta con sus respectivos cables', 'Nuevo', 79000);
+insert into repuestos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (15,'N11M','Monitor Dell', 50,'Panalla Dell', 'Nuevo', 69000);
+
+--TABLA DE REPUESTOS USADOS-- 
+
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (17,'F53C','Nintendo Wii', 20, 'Cable de video', 'Cable en perfecto estado', 150000);
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (18,'W23A','Teclado pc de USB', 1,'Teclado', 'Con un pequeño golpe en la caratula',5000);
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (19,'N11M','Monitor Dell', 50,'Panalla Dell', 'Pantalla sin ningun inconveniente', 69000);
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (20,'Y76G','Control de consola XBox', 2, 'Control', 'Sin ningun inconveniente', 15000);
+insert into repuestos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio) values (8,'D45S','Cable de video', 5,'Cable', 'Cable sin ningun daño', 5000);
+
+--TABLA DE REPORTE TECNICO-- 
+
+insert into  reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (22,'Sin funcionamiento en el monitor, no hay video', 'Cable de video sin reflejo',15000);
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (23,'Control de consola Play Station 5 sin respuesta al dispositivo','Control de la consola Play Station 5 sin  fucion de los botones', 25000);
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (24,'Tarjeta madre sin funcionamiento', 'CPU no corre', 35000);
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (25,'Bateeria de la consola sin funcion', 'Nnintedo Switch sin respuesta luego de encender', 25000);
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (26,'Portatil HP sin respuesta al encender por problemas en la bateria', 'Portatil HP no enciende', 45000);
+
+--TABLA DE USUARIOS-- 
+
+insert into usuarios(id, usuario, contrasena) values (1,'monsty12','123');
+insert into usuarios(id, usuario, contrasena) values (2,'morali65','3215');
+insert into usuarios(id, usuario, contrasena) values (3,'monchi11','456');
+
+--con FK --
+
+--TABLA DE ESTADO-- 
+
+insert into estado(id,clientes_id,descripcion) values (0,1,'Cable de video sin reflejo');
+insert into estado(id,clientes_id,descripcion) values (1,2,'Control de la consola Play Station 5 sin  fucion de los botones');
+insert into estado(id,clientes_id,descripcion) values (2,3,'CPU no corre');
+insert into estado(id,clientes_id,descripcion) values (3,4,'Nnintedo Switch sin respuesta luego de encender');
+insert into estado(id,clientes_id,descripcion) values (4,5,'Portatil HP no enciende');
+
+--TABLA DE TIENDA-- 
+
+insert into tienda(id, taller_id, inventario_id, clientes_id) values (5,15,20,1);
+insert into tienda(id, taller_id, inventario_id, clientes_id) values (6,16,21,2);
+insert into tienda(id, taller_id, inventario_id, clientes_id) values (7,17,22,3);
+insert into tienda(id, taller_id, inventario_id, clientes_id) values (8,18,23,4);
+insert into tienda(id, taller_id, inventario_id, clientes_id) values (9,19,24,5);
+
+--TABLA DE TALLER-- 
+
+insert into taller(id, equipos_id, clientes_id) values (100,85,1);
+insert into taller(id, equipos_id, clientes_id) values (101,86,2);
+insert into taller(id, equipos_id, clientes_id) values (102,87,3);
+insert into taller(id, equipos_id, clientes_id) values (103,88,4);
+insert into taller(id, equipos_id, clientes_id) values (104,89,5);
+
+
+--TABLA DE INVENTARIO-- 
+
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (96,1,6,11,17);
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (97,2,7,12,18);
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (98,3,8,13,19);
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (99,4,9,14,20);
+insert into inventario(id, productos_nuevos_id, productos_usados_id, repuestos_usados_id, repuestos_nuevos_id) values (100,5,10,15,21);
+
+
+
+--TABLA DE FACTURA-- 
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (150,0,'Cable de video sin reflejo', 15000, 13, 16000);
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (151,1,'Control de la consola Play Station 5 sin fucion de los botones', 25000, 13, 26000);
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (152,2,'CPU no corre', 35000, 13, 36000);
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (153,3,'Nnintedo Switch sin respuesta luego de encender', 25000, 13, 26000);
+insert into factura(id, clientes_id, descripcion, costo, iva, total) values (154,4,'Portatil HP no enciende', 45000, 13, 46000);
+
+
+--TABLA DE EQUIPOS-- 
+
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (85,22,0,'56Nf','Modelo 500','Sin funcionamiento de a tarjeta madre','Tarjeta');
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (86,23,1,'57hf','Modelo 600','Control de consola Xbox sin respuesta al dispositivo','Control de consola Xbox');
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (87,24,2,'23Ni','Modelo 700','Luces del Nintendo DSi sin funcionamiento','Caratula y luces');
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (88,25,3,'78lk','Modelo 800','Nintendo Switch con bateria de muy poca duracion','Cargador');
+insert into equipos(id,reporte_tecnico_id, estado_id, numero_serie, modelo, descripcion_problema, accesorios) values (89,26,4,'98fh','Modelo 900','Monitor Dell sin respuesta de video','Cable de video');
+
+
+
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (22,'Sin funcionamiento de a tarjeta madre', 'Tarjeta sin funcion, se necesita reemplazar', 30000);
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (23,'Control de consola Xbox sin respuesta al dispositivo','Se reemplaza pieza que da la señal para el movimiento' 26000);
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (24,'Luces del Nintendo DSi sin funcionamiento', 'El dispositivo sufrio una caida y se desprendieron las luces', 10000);
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (25,'Nintendo Switch con bateria de muy poca duracion', 'La bateria del dispoditivo tiene poca duacion y se encuentra desgastada', 15000);
+insert into reporte_tecnico(id, problema_diagnostico, descripcion, costo) values (26,'Monitorr Dell sin respuesta de video', 'No se refleja el video del cpu al monitor', 30000);
+
+
+--TABLA DE COLA-- 
+
+insert into cola(id, equipos_id, guia_cola) values (150,85,'primero en atender');
+insert into cola(id, equipos_id, guia_cola) values (151,86,'segundo en atender');
+insert into cola(id, equipos_id, guia_cola) values (152,87,'tercero en atender');
+insert into cola(id, equipos_id, guia_cola) values (153,88,'cuarto en atender');
+insert into cola(id, equipos_id, guia_cola) values (154,89,'quinto en atender');
+
+
+
+CREATE TABLE clientes (
+    id               NUMBER NOT NULL,
+    nombre           VARCHAR2(30) NOT NULL,
+    primer_apellido  VARCHAR2(50) NOT NULL,
+    segundo_apellido VARCHAR2(50) NOT NULL,
+    correo           VARCHAR2(100) NOT NULL,
+    telefono         NUMBER NOT NULL
+);
+
+ALTER TABLE clientes ADD CONSTRAINT clientes_pk PRIMARY KEY ( id );
+
+CREATE TABLE cola (
+    id         NUMBER NOT NULL,
+    equipos_id NUMBER NOT NULL,
+    guia_cola  VARCHAR2(25) NOT NULL
+);
+
+ALTER TABLE cola ADD CONSTRAINT cola_pk PRIMARY KEY ( id );
+
+CREATE TABLE equipos (
+    id                   NUMBER NOT NULL,
+    reporte_tecnico_id   NUMBER NOT NULL,
+    estado_id            NUMBER NOT NULL,
+    numero_serie         VARCHAR2(25) NOT NULL,
+    modelo               VARCHAR2(25) NOT NULL,
+    descripcion_problema VARCHAR2(100) NOT NULL,
+    accesorios           VARCHAR2(50) NOT NULL
+);
+
+ALTER TABLE equipos ADD CONSTRAINT equipos_pk PRIMARY KEY ( id );
+
+CREATE TABLE estado (
+    id          NUMBER NOT NULL,
+    clientes_id NUMBER NOT NULL,
+    descripcion VARCHAR2(100) NOT NULL
+);
+
+ALTER TABLE estado ADD CONSTRAINT estado_pk PRIMARY KEY ( id );
+
+CREATE TABLE factura (
+    id          NUMBER NOT NULL,
+    clientes_id NUMBER NOT NULL,
+    descripcion VARCHAR2(100) NOT NULL,
+    costo       FLOAT NOT NULL,
+    iva         FLOAT NOT NULL,
+    total       FLOAT NOT NULL
+);
+
+ALTER TABLE factura ADD CONSTRAINT factura_pk PRIMARY KEY ( id );
+
+CREATE TABLE inventario (
+    id                  NUMBER NOT NULL,
+    productos_nuevos_id NUMBER NOT NULL,
+    productos_usados_id NUMBER NOT NULL,
+    repuestos_usados_id NUMBER NOT NULL,
+    repuestos_nuevos_id NUMBER NOT NULL
+);
+
+ALTER TABLE inventario ADD CONSTRAINT inventario_pk PRIMARY KEY ( id );
+
+CREATE TABLE productos_nuevos (
+    id             NUMBER NOT NULL,
+    codigo         VARCHAR2(50) NOT NULL,
+    nombre         VARCHAR2(50) NOT NULL,
+    cantidad_stock NUMBER NOT NULL,
+    accesorios     VARCHAR2(50) NOT NULL,
+    estado         VARCHAR2(50),
+    precio         FLOAT NOT NULL
+);
+
+ALTER TABLE productos_nuevos ADD CONSTRAINT productos_usadosv1_pk PRIMARY KEY ( id );
+
+CREATE TABLE productos_usados (
+    id             NUMBER NOT NULL,
+    codigo         VARCHAR2(50) NOT NULL,
+    nombre         VARCHAR2(50) NOT NULL,
+    cantidad_stock NUMBER NOT NULL,
+    accesorios     VARCHAR2(50) NOT NULL,
+    estado         VARCHAR2(50),
+    precio         FLOAT NOT NULL
+);
+
+ALTER TABLE productos_usados ADD CONSTRAINT productos_usados_pk PRIMARY KEY ( id );
+
+CREATE TABLE reporte_tecnico (
+    id                   NUMBER NOT NULL,
+    problema_diagnostico VARCHAR2(100) NOT NULL,
+    descripcion          VARCHAR2(100) NOT NULL,
+    costo                FLOAT NOT NULL
+);
+
+ALTER TABLE reporte_tecnico ADD CONSTRAINT reporte_tecnico_pk PRIMARY KEY ( id );
+
+CREATE TABLE repuestos_nuevos (
+    id             NUMBER NOT NULL,
+    codigo         VARCHAR2(50) NOT NULL,
+    nombre         VARCHAR2(50) NOT NULL,
+    cantidad_stock NUMBER NOT NULL,
+    accesorios     VARCHAR2(50) NOT NULL,
+    estado         VARCHAR2(50),
+    precio         FLOAT NOT NULL
+);
+
+ALTER TABLE repuestos_nuevos ADD CONSTRAINT repuestos_usadosv1_pk PRIMARY KEY ( id );
+
+CREATE TABLE repuestos_usados (
+    id             NUMBER NOT NULL,
+    codigo         VARCHAR2(50) NOT NULL,
+    nombre         VARCHAR2(50) NOT NULL,
+    cantidad_stock NUMBER NOT NULL,
+    accesorios     VARCHAR2(50) NOT NULL,
+    estado         VARCHAR2(50),
+    precio         FLOAT NOT NULL
+);
+
+ALTER TABLE repuestos_usados ADD CONSTRAINT productos_usadosv1_pkv1 PRIMARY KEY ( id );
+
+CREATE TABLE taller (
+    id          NUMBER NOT NULL,
+    equipos_id  NUMBER NOT NULL,
+    clientes_id NUMBER NOT NULL
+);
+
+ALTER TABLE taller ADD CONSTRAINT taller_pk PRIMARY KEY ( id );
+
+CREATE TABLE tienda (
+    id            NUMBER NOT NULL,
+    taller_id     NUMBER NOT NULL,
+    inventario_id NUMBER NOT NULL,
+    clientes_id   NUMBER NOT NULL
+);
+
+ALTER TABLE tienda ADD CONSTRAINT tienda_pk PRIMARY KEY ( id );
+
+CREATE TABLE usuarios (
+    id         NUMBER NOT NULL,
+    usuario    VARCHAR2(30) NOT NULL,
+    contrasena VARCHAR2(30) NOT NULL
+);
+
+ALTER TABLE usuarios ADD CONSTRAINT usuarios_pk PRIMARY KEY ( id );
+
+ALTER TABLE cola
+    ADD CONSTRAINT cola_equipos_fk FOREIGN KEY ( equipos_id )
+        REFERENCES equipos ( id );
+
+ALTER TABLE equipos
+    ADD CONSTRAINT equipos_estado_fk FOREIGN KEY ( estado_id )
+        REFERENCES estado ( id );
+
+ALTER TABLE equipos
+    ADD CONSTRAINT equipos_reporte_tecnico_fk FOREIGN KEY ( reporte_tecnico_id )
+        REFERENCES reporte_tecnico ( id );
+
+ALTER TABLE estado
+    ADD CONSTRAINT estado_clientes_fk FOREIGN KEY ( clientes_id )
+        REFERENCES clientes ( id );
+
+ALTER TABLE factura
+    ADD CONSTRAINT factura_clientes_fk FOREIGN KEY ( clientes_id )
+        REFERENCES clientes ( id );
+
+ALTER TABLE inventario
+    ADD CONSTRAINT inventario_productos_nuevos_fk FOREIGN KEY ( productos_nuevos_id )
+        REFERENCES productos_nuevos ( id );
+
+ALTER TABLE inventario
+    ADD CONSTRAINT inventario_productos_usados_fk FOREIGN KEY ( productos_usados_id )
+        REFERENCES productos_usados ( id );
+
+ALTER TABLE inventario
+    ADD CONSTRAINT inventario_repuestos_nuevos_fk FOREIGN KEY ( repuestos_nuevos_id )
+        REFERENCES repuestos_nuevos ( id );
+
+ALTER TABLE inventario
+    ADD CONSTRAINT inventario_repuestos_usados_fk FOREIGN KEY ( repuestos_usados_id )
+        REFERENCES repuestos_usados ( id );
+
+ALTER TABLE taller
+    ADD CONSTRAINT taller_clientes_fk FOREIGN KEY ( clientes_id )
+        REFERENCES clientes ( id );
+
+ALTER TABLE taller
+    ADD CONSTRAINT taller_equipos_fk FOREIGN KEY ( equipos_id )
+        REFERENCES equipos ( id );
+
+ALTER TABLE tienda
+    ADD CONSTRAINT tienda_clientes_fk FOREIGN KEY ( clientes_id )
+        REFERENCES clientes ( id );
+
+ALTER TABLE tienda
+    ADD CONSTRAINT tienda_inventario_fk FOREIGN KEY ( inventario_id )
+        REFERENCES inventario ( id );
+
+ALTER TABLE tienda
+    ADD CONSTRAINT tienda_taller_fk FOREIGN KEY ( taller_id )
+        REFERENCES taller ( id );
