@@ -1,0 +1,147 @@
+----CRUD PRODUCTOS_NUEVOS----
+
+
+--CREATE--
+
+CREATE OR REPLACE PROCEDURE INSERTproductos_nuevos ( 
+p_id PRODUCTOS_NUEVOS.ID%TYPE, 
+p_codigo PRODUCTOS_NUEVOS.CODIGO%TYPE, 
+p_nombre PRODUCTOS_NUEVOS.NOMBRE%TYPE,
+p_cantidad_stock PRODUCTOS_NUEVOS.CANTIDAD_STOCK%TYPE, 
+p_accesorios PRODUCTOS_NUEVOS.ACCESORIOS%TYPE, 
+p_estado PRODUCTOS_NUEVOS.ESTADO%TYPE, 
+p_precio PRODUCTOS_NUEVOS.PRECIO%TYPE 
+)    
+IS  
+BEGIN  
+insert into productos_nuevos(id, codigo, nombre, cantidad_stock, accesorios, estado, precio)  
+VALUES (p_id, p_codigo, p_nombre, p_cantidad_stock, p_accesorios, p_estado, p_precio);  
+COMMIT;  
+END;
+
+--TEST--
+EXECUTE INSERTproductos_nuevos(8,96, 'Tablet', 5, 'cargador', 'nuevo', 25000);
+
+
+--UPDATE--  
+CREATE OR REPLACE PROCEDURE UPDATEproductos_nuevos (
+p_id IN PRODUCTOS_NUEVOS.ID%TYPE, 
+p_codigo IN PRODUCTOS_NUEVOS.CODIGO%TYPE, 
+p_nombre IN PRODUCTOS_NUEVOS.NOMBRE%TYPE,
+p_cantidad_stock IN PRODUCTOS_NUEVOS.CANTIDAD_STOCK%TYPE, 
+p_accesorios IN PRODUCTOS_NUEVOS.ACCESORIOS%TYPE, 
+p_estado IN PRODUCTOS_NUEVOS.ESTADO%TYPE, 
+p_precio IN PRODUCTOS_NUEVOS.PRECIO%TYPE 
+)     
+IS  
+BEGIN  
+UPDATE productos_nuevos SET ID = p_id, CODIGO = p_codigo, NOMBRE = p_nombre, 
+                    CANTIDAD_STOCK = p_cantidad_stock, ACCESORIOS = p_accesorios, ESTADO = p_estado,
+                    PRECIO = p_precio
+				    WHERE ID = p_id;
+COMMIT;  
+END; 
+
+EXECUTE UPDATEproductos_nuevos(8,96, 'cELULAR', 5, 'cargador', 'nuevo', 25000);
+
+--SELECT--
+
+CREATE OR REPLACE PROCEDURE SELECTproductos_nuevos (
+p_id IN PRODUCTOS_NUEVOS.ID%TYPE,  
+p_productos_nuevos_display OUT SYS_REFCURSOR 
+)    
+IS  
+BEGIN  
+OPEN p_productos_nuevos_display for SELECT id, codigo, nombre, cantidad_stock, 
+accesorios, estado, precio FROM PRODUCTOS_NUEVOS
+				WHERE ID = p_id;  
+END;
+
+
+--DELETE--
+
+CREATE OR REPLACE PROCEDURE DELETEproductos_nuevos (
+p_id IN PRODUCTOS_NUEVOS.ID%TYPE  
+)    
+IS  
+BEGIN  
+DELETE FROM PRODUCTOS_NUEVOS WHERE ID = p_id;  
+END;
+
+--test--
+EXECUTE DELETEproductos_nuevos(8);
+
+------------------------------------------------------------
+
+----CRUD PRODUCTOS_USADOS----
+
+
+--CREATE--
+
+CREATE OR REPLACE PROCEDURE INSERTproductos_usados ( 
+p_id PRODUCTOS_USADOS.ID%TYPE, 
+p_codigo PRODUCTOS_USADOS.CODIGO%TYPE, 
+p_nombre PRODUCTOS_USADOS.NOMBRE%TYPE,
+p_cantidad_stock PRODUCTOS_USADOS.CANTIDAD_STOCK%TYPE, 
+p_accesorios PRODUCTOS_USADOS.ACCESORIOS%TYPE, 
+p_estado PRODUCTOS_USADOS.ESTADO%TYPE, 
+p_precio PRODUCTOS_USADOS.PRECIO%TYPE 
+)    
+IS  
+BEGIN  
+insert into productos_usados(id, codigo, nombre, cantidad_stock, accesorios, estado, precio)  
+VALUES (p_id, p_codigo, p_nombre, p_cantidad_stock, p_accesorios, p_estado, p_precio);  
+COMMIT;  
+END;
+
+--TEST--
+EXECUTE INSERTproductos_usados(8,96, 'Tablet', 5, 'cargador', 'nuevo', 25000);
+
+
+--UPDATE--  
+CREATE OR REPLACE PROCEDURE UPDATEproductos_usados (
+p_id IN PRODUCTOS_USADOS.ID%TYPE, 
+p_codigo IN PRODUCTOS_USADOS.CODIGO%TYPE, 
+p_nombre IN PRODUCTOS_USADOS.NOMBRE%TYPE,
+p_cantidad_stock IN PRODUCTOS_USADOS.CANTIDAD_STOCK%TYPE, 
+p_accesorios IN PRODUCTOS_USADOS.ACCESORIOS%TYPE, 
+p_estado IN PRODUCTOS_USADOS.ESTADO%TYPE, 
+p_precio IN PRODUCTOS_USADOS.PRECIO%TYPE 
+)     
+IS  
+BEGIN  
+UPDATE productos_usados SET ID = p_id, CODIGO = p_codigo, NOMBRE = p_nombre, 
+                    CANTIDAD_STOCK = p_cantidad_stock, ACCESORIOS = p_accesorios, ESTADO = p_estado,
+                    PRECIO = p_precio
+				    WHERE ID = p_id;
+COMMIT;  
+END; 
+
+EXECUTE UPDATEproductos_usados(8,96, 'cELULAR', 5, 'cargador', 'nuevo', 25000);
+
+--SELECT--
+
+CREATE OR REPLACE PROCEDURE SELECTproductos_usados (
+p_id IN PRODUCTOS_USADOS.ID%TYPE,  
+p_productos_usados_display OUT SYS_REFCURSOR 
+)    
+IS  
+BEGIN  
+OPEN p_productos_usados_display for SELECT id, codigo, nombre, cantidad_stock, 
+accesorios, estado, precio FROM PRODUCTOS_USADOS
+				WHERE ID = p_id;  
+END;
+
+
+--DELETE--
+
+CREATE OR REPLACE PROCEDURE DELETEproductos_usados (
+p_id IN PRODUCTOS_USADOS.ID%TYPE  
+)    
+IS  
+BEGIN  
+DELETE FROM PRODUCTOS_USADOS WHERE ID = p_id;  
+END;
+
+--test--
+EXECUTE DELETEproductos_usados(8);
